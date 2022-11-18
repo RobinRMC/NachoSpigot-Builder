@@ -27,6 +27,7 @@ jobs:
     - name: Install minecraft-server to local repo
       run: |
         git submodule update --init
+        ls
         '/home/runner/work/NachoSpigot-Builder/NachoSpigot-Builder/Fixes/remap.sh'
 
     - name: Build with Maven
