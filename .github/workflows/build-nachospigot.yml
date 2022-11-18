@@ -8,7 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '[skip]')"
     steps:
-    - uses: actions/checkout@v2
+    - name: Get files from NachoSpigot
+      uses: actions/checkout@v2
       with:
         repository: 'RobinRMC/NachoSpigot'
     - name: Set up JDK 17
