@@ -27,7 +27,8 @@ jobs:
     - name: Install minecraft-server to local repo
       run: |
         git submodule update --init
-        ./Fixes/remap.sh
+        cd Fixes
+        ./remap.sh
 
     - name: Build with Maven
       run: mvn clean package --file $GITHUB_WORKSPACE/pom.xml
